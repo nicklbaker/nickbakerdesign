@@ -1,9 +1,12 @@
-body {
+html{
+    min-height:100vh;
+    background-color:#4B8E8C;
     background-image: url('assets/nbd-mountainbg.png');
-    background-size: cover;
-    background-position: center;
+    background-size: 100%;
+    background-position: center bottom;
     background-repeat: no-repeat;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -12,24 +15,101 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+}
+
+header {
+    height: 160px;
+
+}
+
+header h1 {
+    display: block; 
+    float: left;
+    line-height: 160px;
+    margin-left: 20px;
+}
+
+header a {
+    cursor: pointer;
+}
+
+header nav {
+    display: block;
+    height: 160px;
+    float: right;
+    margin-right: 20px;
+}
+header nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Cabin Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 160px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
+}
+
+header nav a:hover {
+    color: #DF2631;
+    text-decoration: underline;
+    transform: translateY(-5px);
+}
+
+main{
+    display: block;
+    width:100%;
+}
+
+
+main.hometitle {
+    width: 1000px;
+    margin-top: 200px
+}
+
+footer{
+    width: 100%;
+    height: 20px;
+}
+
+.left-image {
+    width: 100%;
+    max-width: 500px;
+    float: left;
+    display: block;
+}
+.left-image img {
+    display: block;
+    width: 334px;
+    height: 332px;
+    margin: 0 auto;
+    border-width: 20px 20px 100px 20px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    box-shadow: -5px 5px 0px #A6A743;
+}
+.content {
+    width: 100%;
+    max-width: 500px;
+    float: left;
 }
 
 h1 {
+    margin: 0;
+    padding: 0;
     font-family: 'Squada One', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 128px;
     line-height: 100px;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
 
     color: #FFFFFF;
-    border: 2px solid #A6A743;
+    -webkit-text-stroke: 2px #A6A743;
     text-shadow: -5px 5px 0px #DF2631;
 }
 
@@ -38,22 +118,28 @@ h2 {
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
+    text-transform: uppercase;
 
     color: #1E1E1E;
 }
 
 .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    float:left;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 20px 10px 20px;
+    box-sizing: border-box;
     overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card a {
-    text-decoration: none;
-    color: inherit;
     display: block;
+    padding: 20px 20px 10px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: -5px 5px 0px #A6A743;
+    background-color: #FFFFFF;
+    color: #171717;
+    text-decoration: none;
 }
 
 .card img {
@@ -64,33 +150,119 @@ h2 {
 
 .card h2 {
     margin: 10px 0;
-    font-size: 1.5rem;
-    font-weight: 700;
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    
+    font-family: 'Permanent Marker';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    
+}
+.card h3 {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    
+    font-family: 'Permanent Marker';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
 }
 
-.card:hover {
+.card a:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.button {
 
+.cta-buttons{
+    display: block;
+    width: 100%;
+}
+.cta-buttons :first-child {
+    margin-right:20px;
+}
+.button {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 12px 21px;
-    gap: 10px;
-    height: 68px;
+    height: 80px;
+    line-height: 80px;
     
     font-family: 'Cabin Condensed', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     
     color: #1E1E1E;
     background: #A6A743;
     border: 2px solid #FFFFFF;
     box-shadow: -5px 5px 0px #DF2631;
     }
+
+.button:hover {
+    background: #DF2631;
+    color: #FFFFFF;
+    box-shadow: -5px 5px 0px #A6A743;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;}
+    .card {
+        width: 50%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1000px) {
+    
+    main, main.hometitle {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .hometitle {
+        margin-top: 0;
+    }
+    .left-image, .content{
+        max-width: 324px;
+        float: none;
+        display: block;
+        margin: 60px auto;
+    }
+    .left-image img {
+        box-sizing: border-box;
+        width: 60%;
+        display: block;
+        height: auto;
+        border-width: 10px 10px 50px 10px;
+    }
+    .button {
+        font-size: 24px;
+        height: 60px;
+        line-height: 60px;
+    }
+}
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 368px) {
+    h1 {
+        font-size: 64px;
+        line-height: 50px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    
+}
