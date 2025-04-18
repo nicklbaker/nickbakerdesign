@@ -1,0 +1,96 @@
+body {
+    background-image: url('assets/nbd-mountainbg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+h1 {
+    font-family: 'Squada One', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 100px;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+    border: 2px solid #A6A743;
+    text-shadow: -5px 5px 0px #DF2631;
+}
+
+h2 {
+    font-family: 'Cabin Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+
+    color: #1E1E1E;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 21px;
+    gap: 10px;
+    height: 68px;
+    
+    font-family: 'Cabin Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    
+    color: #1E1E1E;
+    background: #A6A743;
+    border: 2px solid #FFFFFF;
+    box-shadow: -5px 5px 0px #DF2631;
+    }
