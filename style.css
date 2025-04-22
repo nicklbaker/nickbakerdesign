@@ -76,7 +76,7 @@ main.page{
     width: 600px;
     margin: 0 auto;
 }
-.resume-section {
+.resume-section, .project-section {
     
     background-color: #FFFFFF;
     padding: 20px;
