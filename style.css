@@ -280,9 +280,10 @@ h2, .resume-section h3 {
     .content{
         max-width: 400px;
     }
-    .project-image{
+    .project-image, .graphicexample{
         width:100%;
         margin-left: 0;
+        padding: 20px 0 20px 0
     }
     .left-image, .content{
         float: none;
