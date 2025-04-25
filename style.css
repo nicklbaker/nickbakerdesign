@@ -17,8 +17,12 @@ body {
     color: #1E1E1E;
 }
 
+.homecontainer {
+    width: 1000px;
+    margin: 0 auto;
+}
 .container {
-    width: 1200px;
+    width: 800px;
     margin: 0 auto;
 }
 
@@ -137,8 +141,21 @@ h2, .resume-section h3 {
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
-    line-height: 60px;
+    line-height: 1.2em;
+    margin-bottom: 0
 }
+
+.project-image{
+    width:1000px;
+    margin-left: -100px;
+}
+.graphicexample{
+    max-width:800px;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .job h4{
     font-family: 'Cabin Condensed', sans-serif;
     font-style: normal;
@@ -152,7 +169,7 @@ h2, .resume-section h3 {
     float:left;
     width: 100%;
     max-width: 400px;
-    padding: 20px 20px 10px 20px;
+    padding: 20px 20px 10px 0;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -237,31 +254,35 @@ h2, .resume-section h3 {
     transition: all 0.2s ease-in-out;
 }
 
-@media (max-width: 1200px) {
-    .container {
+@media (max-width: 1000px) {
+    .container, .homecontainer{
         width: 100%;}
     .card {
         width: 50%;
         max-width: 600px;
     }
-}
-
-@media (max-width: 1000px) {
     
     main, main.hometitle {
         box-sizing: border-box;
         width: 100%;
         padding: 0 20px;
     }
-    header {
-        width: 100%;
-        margin: 0 auto;
+    header .pagetitle{
+        margin-left: 20px;
     }
-    .hometitle {
+    main.hometitle {
         margin-top: 0;
+    }
+    header nav {
+        margin-left: 20px;
+        height: 40px;
     }
     .content{
         max-width: 400px;
+    }
+    .project-image{
+        width:100%;
+        margin-left: 0;
     }
     .left-image, .content{
         float: none;
@@ -281,14 +302,20 @@ h2, .resume-section h3 {
         height: 60px;
         line-height: 60px;
     }
-    header .pagetitle, h1 {
+}
+
+@media (max-width: 800px) {
+    main.hometitle, main.page {
+        width: 100%;
+        margin-top: 0px;
+    }
+    header {
+        width: 100%;
+        margin: 0 auto;
+    }
+    header .pagetitle {
         font-size: 96px;
         line-height: 96px;
-        padding-left:20px;
-    }
-    header nav {
-        margin-left: 20px;
-        height: 40px;
     }
     header nav a{
         font-size: 18px;
@@ -299,29 +326,27 @@ h2, .resume-section h3 {
     }
 }
 @media (max-width: 600px) {
-    main.hometitle, main.page {
-        width: 100%;
-        margin-top: 0px;
-    }
-    .left-image img {
-        width: 100%;
-    }
     .card {
         width: 100%;
         max-width: 100%;
-    }
-    header .pagetitle, h1 {
-        font-size: 64px;
-        line-height: 64px;
+        padding: 20px 0;
     }
     .cta-buttons :first-child {
         margin-bottom: 12px;
     }
     .page h2{
-        margin-top: 0;
+        font-size: 32px;
+        
     }
 }
-@media (max-width: 368px) {
+@media (max-width: 400px) {
+    header .pagetitle, h1 {
+        font-size: 64px;
+        line-height: 64px;
+    }
+    .left-image img {
+        width: 100%;
+    }
     h2 {
         font-size: 24px;
     }
