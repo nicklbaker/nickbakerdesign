@@ -14,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #1E1E1E;
+    color: #FFFFFF;
 }
 
 .homecontainer {
@@ -91,24 +91,27 @@ footer{
 
 .left-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     float: left;
     display: block;
+    padding: 20px 20px 10px 20px;
+    margin-right:40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: -5px 5px 0px #A6A743;
+    background-color: #FFFFFF;
+    color: #171717;
+    text-decoration: none;
 }
 .left-image img {
+    width: 100%;
+    height: auto;
     display: block;
-    width: 334px;
-    height: 332px;
-    margin: 0 auto;
-    border-width: 20px 20px 100px 20px;
-    border-style: solid;
-    border-color: #FFFFFF;
-    box-shadow: -5px 5px 0px #A6A743;
 }
 .content {
     width: 100%;
     max-width: 500px;
     float: left;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 h1, .pagetitle {
@@ -190,7 +193,7 @@ h2, .resume-section h3 {
     display: block;
 }
 
-.card h2 {
+.card h2, .left-image h2 {
     margin: 10px 0;
     display: block;
     width: 100%;
@@ -293,7 +296,6 @@ h2, .resume-section h3 {
     }
     .left-image img {
         box-sizing: border-box;
-        width: 80%;
         display: block;
         height: auto;
         border-width: 10px 10px 50px 10px;
