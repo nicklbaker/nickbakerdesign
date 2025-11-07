@@ -113,7 +113,9 @@ footer{
     float: left;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-
+.cta-buttons{
+    text-shadow: none;
+}
 h1, .pagetitle {
     margin: 0;
     padding: 0;
